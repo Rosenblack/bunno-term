@@ -156,17 +156,11 @@ function printUser(){
     // do nothing
   } else if(x.toLowerCase() == "shale"){
     shale();
+  } else if(x.toLowerCase() == "bunno"){
+    bunno();
   } else if(x.toLowerCase() == "mara"){
     mara();
-  } else if(x.toLowerCase() == "aboutme"){
-    aboutme();
-  } else if(x.toLowerCase() == "email"){
-    email();
-  } else if(x.toLowerCase() == "projects"){
-    projects();
-  } else if(x.toLowerCase() == "resume"){
-	resume();
-  }else if(x.toLowerCase() == "history"){
+  } else if(x.toLowerCase() == "history"){
 	history();
   }else{
     invalid();
@@ -196,8 +190,9 @@ function help(){
   commands[0] = 'help' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'print commands';
   commands[1] = 'clear' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'clear terminal';
   commands[2] = 'shale' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'opens shales character page';
-  commands[3] = 'mara' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'opens maras character page';
-  commands[4] = 'history' + '\xa0\xa0\xa0\xa0\xa0' + 'display previously inputed commands';
+  commands[3] = 'bunno' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'opens bunnos character page';
+  commands[4] = 'mara' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'opens maras character page';
+  commands[5] = 'history' + '\xa0\xa0\xa0\xa0\xa0' + 'display previously inputed commands';
 
   for(let i = 0; i < commands.length; i++){
     let buf = document.createElement("p");
@@ -227,6 +222,10 @@ function invalid(){
 }
 function shale(){
   window.location = "/bunno-term/shale";
+}
+
+function bunno(){
+  window.location = "/bunno-term/bunno";
 }
 
 function mara(){
