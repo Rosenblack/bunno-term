@@ -117,7 +117,7 @@ function printUser(){
   let til = document.createElement("span");
   let dol = document.createElement("span");
 
-  username.appendChild(document.createTextNode("visitor@patricksSite"));
+  username.appendChild(document.createTextNode("root@bunno"));
   username.className = "greenText";
 
   col.appendChild(document.createTextNode(":"));
