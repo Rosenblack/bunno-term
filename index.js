@@ -196,7 +196,8 @@ function help(){
   commands[0] = 'help' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'print commands';
   commands[1] = 'clear' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'clear terminal';
   commands[2] = 'shale' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'opens shales character page';
-  commands[3] = 'history' + '\xa0\xa0\xa0\xa0\xa0' + 'display previously inputed commands';
+  commands[3] = 'mara' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + 'opens maras character page';
+  commands[4] = 'history' + '\xa0\xa0\xa0\xa0\xa0' + 'display previously inputed commands';
 
   for(let i = 0; i < commands.length; i++){
     let buf = document.createElement("p");
