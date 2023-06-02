@@ -156,6 +156,8 @@ function printUser(){
     // do nothing
   } else if(x.toLowerCase() == "shale"){
     shale();
+  } else if(x.toLowerCase() == "mara"){
+    mara();
   } else if(x.toLowerCase() == "aboutme"){
     aboutme();
   } else if(x.toLowerCase() == "email"){
@@ -226,6 +228,9 @@ function shale(){
   window.location = "/bunno-term/shale";
 }
 
+function mara(){
+  window.location = "/bunno-term/mara";
+}
 
 /**
  * Display history
