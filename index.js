@@ -9,6 +9,15 @@
  * Last modified  : 2022-12-30 12:44:00
  */
 
+
+/** 
+ * sleeps for a given number of ms
+ */
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
 /** 
  * decide how the program should resopond to certain key presses
  */
@@ -40,6 +49,58 @@ function choosePath(e){
     }
   }
 }
+
+
+/** 
+ * called at the start of the program. Creates text box, displays logo and help message
+ */
+async function start(){
+  let newLine = document.createElement("div");
+  newLine.className = "spaced";
+  newLine.id = "sp";
+
+  let username = document.createElement("span");
+  let col = document.createElement("span");
+  let til = document.createElement("span");
+  let dol = document.createElement("span");
+
+  let tbox = document.createElement("input");
+  tbox.className = "inputText";
+  tbox.spellcheck = false;
+  tbox.id = "myInput";
+
+  username.appendChild(document.createTextNode("root@bunno"));
+  username.className = "greenText";
+
+  col.appendChild(document.createTextNode(":"));
+  col.className = "whiteText";
+
+  til.appendChild(document.createTextNode("~"));
+  til.className = "blueText";
+
+  dol.appendChild(document.createTextNode("$"));
+  dol.className = "whiteText";
+
+  newLine.appendChild(username);
+  newLine.appendChild(col);
+  newLine.appendChild(til);
+  newLine.appendChild(dol);
+
+  newLine.appendChild(tbox);
+  document.body.appendChild(newLine);
+
+  let helpMessage = document.createElement("p");
+  helpMessage.className = "hlpMessage";
+  helpMessage.id = "hlp";
+  helpMessage.textContent = "Type " + "\'help\' for the list of commands in the prompt below";
+
+  logo(true);
+
+  document.getElementById("invisible_div").appendChild(helpMessage);
+  document.getElementById("myInput").focus();
+}
+
+
 /** 
  * copies input box and contents into a new string and appends it to the screen.
  * Then decides what function to call based on the input in the text box
@@ -187,5 +248,6 @@ function history(){
 window.addEventListener("keydown", choosePath); // listen for key presses
 
 var x = "";			// the input that will be in the input box
+var sleepTime = 30; // the time  between each color change for logo
 var hist = [];		// an array to store all commands excecuted by the user
 var counter = 0;	// used to sift through the previous commands
