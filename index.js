@@ -223,7 +223,7 @@ function invalid(){
   document.getElementById("invisible_div").appendChild(store);
 }
 function shale(){
-  window.location = "/shale";
+  window.location = "/DnD-Sheet/shale";
 }
 
 
