@@ -424,7 +424,7 @@ td {
 #apperance #char-img {
     height: 100%;
     width: 100%;
-    min-height: 350px;
+    min-height: 500px;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../imgs/character.png);
